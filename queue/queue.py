@@ -13,6 +13,8 @@ return elements in First In First Out order.
 Stretch: What if you could only use instances of your Stack class to implement the Queue?
          What would that look like? How many Stacks would you need? Try it!
 """
+### 3. The difference between using an array versus a linked list when implemennting a Queue is that you have to change the index that you want to pop on the array and for the queue, you have to change the head node first before deleting the first element.
+
 # 1. Using Arrays
 '''
 class Queue:
