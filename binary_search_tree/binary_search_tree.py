@@ -60,8 +60,7 @@ class BSTNode:
 
     # Call the function `fn` on the value of each node
     def for_each(self, fn):
-        if self.value:
-            fn(self.value)
+        fn(self.value)
         if self.left:
             self.left.for_each(fn)
         if self.right:
@@ -72,7 +71,16 @@ class BSTNode:
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
     def in_order_print(self, node):
-        pass
+        if node: 
+            # First recur on left child 
+            self.in_order_print(node.left) 
+    
+            # then print the data of node 
+            print(node.value), 
+    
+            # now recur on right child 
+            self.in_order_print(node.right) 
+            
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
@@ -82,7 +90,13 @@ class BSTNode:
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
-        pass
+        if not node:
+            print(node.value)
+            return
+        if self.left:
+            self.left.dft_print(node)
+        if self.right:
+            self.right.dft_print(node)
 
     # Stretch Goals -------------------------
     # Note: Research may be required
